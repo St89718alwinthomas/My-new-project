@@ -1,95 +1,73 @@
-# 🌿 LeafyDoctor: AI-Powered Plant Disease Identifier
+# LeafyDoctor: AI-Powered Plant Disease Identifier
 
-> Final project for the Building AI course (by Reaktor & University of Helsinki)
+Final project for the Building AI course
 
----
+## Summary
 
-## 📌 Summary
+LeafyDoctor is an AI tool that identifies plant diseases from leaf images. It uses deep learning to detect common crop diseases and offers treatment advice to help farmers make better decisions faster.
 
-**LeafyDoctor** is a smart assistant that helps farmers and gardeners identify plant diseases by analyzing leaf images using AI. It quickly detects common plant diseases and offers actionable treatment suggestions — all within seconds.
+## Background
 
----
+Plant diseases cause significant crop losses globally, and many farmers lack access to expert diagnosis. This project uses AI to make plant disease detection accessible to all, especially in remote areas.
 
-## 🌱 Background
+Problems it solves:
+* Crop loss due to late or missed disease detection
+* Lack of agricultural experts in rural areas
+* Difficulty identifying visual symptoms without training
 
-Plant diseases cause massive agricultural losses every year. Unfortunately, early diagnosis is often hard in rural areas due to a lack of access to expert plant pathologists. LeafyDoctor aims to bridge that gap.
+## How is it used?
 
-### Problem it solves:
-- 🧪 20–40% of crops are lost annually due to diseases.
-- 👨‍🌾 Small-scale farmers may not have access to agricultural experts.
-- ⚠️ Visual symptoms can be misleading or hard to recognize without help.
+Users take or upload a photo of a leaf. The AI model then analyzes it and identifies any disease, giving a confidence score and recommended actions.
 
-I was inspired to build this project from my curiosity about AI for good — and its power to assist communities in need.
+Ideal for:
+* Farmers and home gardeners
+* Agriculture students
+* Areas with limited expert access
 
----
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Tomato_blight_-_leaves.jpg/800px-Tomato_blight_-_leaves.jpg" width="300">
 
-## 🚀 How It’s Used
-
-1. User takes or uploads a photo of an infected leaf.
-2. The image is processed using a convolutional neural network.
-3. The model classifies the disease and returns treatment tips.
-
-### Typical Users:
-- 🌾 Smallholder farmers
-- 📸 Agriculture students & researchers
-- 🌍 Areas with limited internet access (offline version in development)
-
-### Example:
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Tomato_blight_-_leaves.jpg/800px-Tomato_blight_-_leaves.jpg" width="300" alt="Leaf Disease Example">
-
+Example:
 Disease: Early Blight
 Confidence: 94%
-Recommendation: Remove infected leaves. Apply a fungicide with chlorothalonil. Avoid overhead watering.
+Recommendation: Apply fungicide with chlorothalonil. Avoid overhead watering.
 
----
+markdown
+Copy
+Edit
 
-## 🧠 Data Sources & AI Methods
+## Data sources and AI methods
 
-LeafyDoctor is powered by transfer learning on top of a ResNet50 model, trained using thousands of labeled leaf images.
+The model is based on ResNet50 fine-tuned using the PlantVillage dataset.
 
-### Data:
-- [PlantVillage Dataset](https://plantvillage.psu.edu/)
-- Additional open-source agricultural image datasets
+Data:
+* [PlantVillage Dataset](https://plantvillage.psu.edu/)
+* Public agricultural image sets
 
 | Model        | Accuracy |
 |--------------|----------|
 | ResNet50     | 94%      |
 | MobileNetV2  | 91%      |
 
----
+## Challenges
 
-## ⚠️ Challenges
+Limitations:
+* May misidentify overlapping symptoms
+* Doesn’t cover nutrient deficiencies
+* Struggles with poor lighting or blurry images
 
-### Current Limitations:
-- ❌ Cannot yet detect nutrient deficiencies (only diseases)
-- 🌫️ Accuracy may drop with poor lighting or blurry images
-- 🌍 Currently supports only 10 plant species
+Ethical Considerations:
+* Meant to assist, not replace experts
+* Incorrect diagnosis can lead to misuse of chemicals
 
-### Ethical Considerations:
-- AI results should not replace expert diagnosis entirely
-- Misdiagnosis could lead to unnecessary pesticide use
+## What next?
 
----
+Future improvements:
+* Offline mobile app
+* Add more plant types and regional disease variations
+* Collaborate with agricultural experts for validation
 
-## 🔭 What's Next?
+## Acknowledgments
 
-Here’s how LeafyDoctor can grow:
-- 📱 Mobile app with offline support
-- 🌾 Add more regional crop diseases
-- 📊 Build explainable AI layer for transparency
-- 🤝 Collaborate with agri-extension programs
-
-### Needs:
-- Diverse datasets from different regions
-- UI/UX and mobile developers
-- Field testing with farmers
-
----
-
-## 🙌 Acknowledgments
-
-- Inspired by the [PlantVillage Project](https://plantvillage.psu.edu/)
-- Image credit: [Tomato blight by Scot Nelson](https://commons.wikimedia.org/wiki/File:Tomato_blight_-_leaves.jpg) / [CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
-- Huge thanks to the [Building AI](https://buildingai.elementsofai.com/) course creators
-
----
+* [PlantVillage Project](https://plantvillage.psu.edu/)
+* [Tomato blight image by Scot Nelson](https://commons.wikimedia.org/wiki/File:Tomato_blight_-_leaves.jpg) / [CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
+* University of Helsinki & Reaktor for the Building AI course

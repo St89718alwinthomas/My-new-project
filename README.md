@@ -4,7 +4,7 @@
 
 ---
 
-## Summary
+## 📌 Summary
 
 **LeafyDoctor** is a smart assistant that helps farmers and gardeners identify plant diseases by analyzing leaf images using AI. It quickly detects common plant diseases and offers actionable treatment suggestions — all within seconds.
 

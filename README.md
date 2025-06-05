@@ -63,3 +63,7 @@ Future goals:
 - PlantVillage dataset
 - Building AI course by University of Helsinki and Reaktor
 - Tomato leaf image from Wikimedia Commons / CC BY 2.0
+
+- git add README.md
+git commit -m "Fix summary format for Building AI course"
+git push origin main

@@ -4,70 +4,62 @@ Final project for the Building AI course
 
 ## Summary
 
-LeafyDoctor is an AI tool that identifies plant diseases from leaf images. It uses deep learning to detect common crop diseases and offers treatment advice to help farmers make better decisions faster.
+LeafyDoctor is an AI tool that identifies plant diseases from leaf images. It helps farmers and gardeners detect problems early and get treatment suggestions using deep learning models.
 
 ## Background
 
-Plant diseases cause significant crop losses globally, and many farmers lack access to expert diagnosis. This project uses AI to make plant disease detection accessible to all, especially in remote areas.
+Plant diseases lead to huge losses in agriculture every year. Early detection is hard in rural areas where expert help is limited. LeafyDoctor helps bridge this gap using AI.
 
-Problems it solves:
-* Crop loss due to late or missed disease detection
-* Lack of agricultural experts in rural areas
-* Difficulty identifying visual symptoms without training
+This project solves:
+* Crop loss due to undetected diseases
+* Lack of access to agricultural experts
+* Misidentification of symptoms by non-experts
 
 ## How is it used?
 
-Users take or upload a photo of a leaf. The AI model then analyzes it and identifies any disease, giving a confidence score and recommended actions.
+Users take or upload a photo of a plant leaf. The AI model analyzes it and returns:
+- the disease name
+- confidence score
+- basic treatment advice
 
-Ideal for:
-* Farmers and home gardeners
-* Agriculture students
-* Areas with limited expert access
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Tomato_blight_-_leaves.jpg/800px-Tomato_blight_-_leaves.jpg" width="300">
-
-Example:
-Disease: Early Blight
-Confidence: 94%
-Recommendation: Apply fungicide with chlorothalonil. Avoid overhead watering.
-
-markdown
-Copy
-Edit
+It is mainly useful for:
+- small-scale farmers
+- agriculture students
+- rural areas with limited expert access
 
 ## Data sources and AI methods
 
-The model is based on ResNet50 fine-tuned using the PlantVillage dataset.
+The AI uses a convolutional neural network (ResNet50) trained on the PlantVillage dataset, which contains labeled images of healthy and diseased leaves.
 
 Data:
-* [PlantVillage Dataset](https://plantvillage.psu.edu/)
-* Public agricultural image sets
+- PlantVillage Dataset
+- Other public image datasets
 
-| Model        | Accuracy |
-|--------------|----------|
-| ResNet50     | 94%      |
-| MobileNetV2  | 91%      |
+AI method:
+- Transfer learning with ResNet50
+- Image preprocessing (resizing, normalization)
+- Training with 80/20 validation split
 
 ## Challenges
 
 Limitations:
-* May misidentify overlapping symptoms
-* Doesn’t cover nutrient deficiencies
-* Struggles with poor lighting or blurry images
+- Model accuracy drops in poor lighting
+- Limited to only 10 crops and diseases
+- Doesn’t handle nutrient deficiencies
 
-Ethical Considerations:
-* Meant to assist, not replace experts
-* Incorrect diagnosis can lead to misuse of chemicals
+Ethical issues:
+- Misdiagnosis risk
+- Dependency on AI without expert validation
 
 ## What next?
 
-Future improvements:
-* Offline mobile app
-* Add more plant types and regional disease variations
-* Collaborate with agricultural experts for validation
+Future goals:
+- Add more crops and disease classes
+- Develop a mobile offline version
+- Partner with agriculture programs for field testing
 
 ## Acknowledgments
 
-* [PlantVillage Project](https://plantvillage.psu.edu/)
-* [Tomato blight image by Scot Nelson](https://commons.wikimedia.org/wiki/File:Tomato_blight_-_leaves.jpg) / [CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
-* University of Helsinki & Reaktor for the Building AI course
+- PlantVillage dataset
+- Building AI course by University of Helsinki and Reaktor
+- Tomato leaf image from Wikimedia Commons / CC BY 2.0
